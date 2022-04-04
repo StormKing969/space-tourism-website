@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <main>
       <div className='bg_img'>
-        <img src={BgImgMobile} />
+        <img src={BgImgMobile} alt='background' />
       </div>
     </main>
   )
