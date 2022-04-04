@@ -1,5 +1,5 @@
 import React from 'react'
-import LOGO from '../../assets/shared/logo.svg'
+import LogoIcon from '../../assets/shared/logo.svg'
 import HamburgerMenu from '../../assets/shared/icon-hamburger.svg'
 import CloseIcon from '../../assets/shared/icon-close.svg'
 
@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
     <div className='logo_icon'>
-      <img src={LOGO} alt='logo icon' />
+      <img src={LogoIcon} alt='logo icon' />
     </div>
 
       <div className='menu'>

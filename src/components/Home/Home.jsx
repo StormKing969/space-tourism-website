@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BgImgMobile from '../../assets/home/background-home-mobile.jpg'
-import BgImgTablet from '../../assets/home/background-home-tablet.jpg'
-import BgImgDesktop from '../../assets/home/background-home-desktop.jpg'
+// import BgImgTablet from '../../assets/home/background-home-tablet.jpg'
+// import BgImgDesktop from '../../assets/home/background-home-desktop.jpg'
 
 // const [displayImg, setDisplayImg] = useState[{BgImgMobile}]
 
