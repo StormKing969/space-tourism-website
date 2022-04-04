@@ -1,8 +1,13 @@
 .bg_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: contain;
+        height: 100vh;
+        z-index: -1;
+    }
 }
 
 @media screen and (min-width: 720px) {

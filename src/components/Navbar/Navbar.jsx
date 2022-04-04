@@ -16,10 +16,10 @@ const Navbar = () => {
         <div className='menu_open'>
           <img src={CloseIcon} alt='close icon' />
             <ul>
-              <li>00 <span>HOME</span></li>
-              <li>01 <span>DESTINATION</span></li>
-              <li>02 <span>CREW</span></li>
-              <li>03 <span>TECHNOLOGY</span></li>
+              <li><a href='/'><span aria-hidden>00</span>HOME</a></li>
+              <li><a href='/destination'><span aria-hidden>01</span>DESTINATION</a></li>
+              <li><a href='/crew'><span aria-hidden>02</span>CREW</a></li>
+              <li><a href='/technology'><span aria-hidden>03</span>TECHNOLOGY</a></li>
             </ul>
         </div>
       </div>

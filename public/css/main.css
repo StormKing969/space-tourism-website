@@ -7,7 +7,6 @@
 
 body {
   position: relative;
-  padding: 1rem;
 }
 
 .navbar {
@@ -36,14 +35,13 @@ body {
   cursor: pointer;
 }
 
-.menu_open {
-  display: none;
-}
-
-.bg_img {
+.bg_img img {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100vh;
   z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
