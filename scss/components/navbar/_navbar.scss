@@ -1,0 +1,30 @@
+.navbar {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_icon {
+    
+    img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.menu {
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.menu_open {
+    display: none;
+}
+
+@media screen and (min-width: 720px) {
+    
+}
