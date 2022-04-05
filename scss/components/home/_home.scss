@@ -1,20 +1,30 @@
+.home_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .bg_img {
+    transition: $transition;
     
     img {
         position: absolute;
         top: 0;
+        left: 0;
         right: 0;
-        object-fit: contain;
+        object-fit:  cover;
         height: 100vh;
+        width: 100%;
         z-index: -1;
     }
 }
 
-@media screen and (min-width: 720px) {
-    .bg_img {
+// @media screen and (min-width: 720px) {
+//     .bg_img {
 
-        img {
-            // src: ;
-        }
-    }
-}
+//         img {
+//             // src: ;
+//         }
+//     }
+// }

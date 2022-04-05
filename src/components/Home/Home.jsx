@@ -1,22 +1,13 @@
 import React from 'react'
-import BgImgMobile from '../../assets/home/background-home-mobile.jpg'
-// import BgImgTablet from '../../assets/home/background-home-tablet.jpg'
-// import BgImgDesktop from '../../assets/home/background-home-desktop.jpg'
-
-// const [displayImg, setDisplayImg] = useState[{BgImgMobile}]
-
-// function windowDimensions() {
-//   console.log(document.querySelector(window).innerWidth());
-// }
-
-// console.log(displayImg);
-// windowDimensions()
+import imgBg from './useResizedImages'
 
 const Home = () => {
+  const BgImg = imgBg().current;
+  
   return (
-    <main>
+    <main className='home_container'>
       <div className='bg_img'>
-        <img src={BgImgMobile} alt='background' />
+        <img src={ BgImg } alt='background' />
       </div>
     </main>
   )

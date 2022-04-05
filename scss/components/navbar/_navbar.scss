@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 .logo_icon {
@@ -16,13 +17,13 @@
 
 .menu {
 
-    img {
+    .menu_close {
         cursor: pointer;
     }
-}
 
-.menu_open {
-    // display: none;
+    .menu_open {
+        cursor: pointer;
+    }
 }
 
 @media screen and (min-width: 720px) {
