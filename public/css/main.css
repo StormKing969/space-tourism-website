@@ -32,12 +32,56 @@ body {
   height: 80%;
 }
 
-.menu .menu_close {
+.menu_close {
   cursor: pointer;
 }
 
-.menu .menu_open {
+.menu_open {
+  position: fixed;
+  inset: 0 0 0 35%;
+  background: rgba(0, 0, 0, 0.333);
+  padding: 1rem;
+}
+
+.menu_open img {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   cursor: pointer;
+}
+
+.menu_open ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin-top: 6rem;
+}
+
+.menu_open ul li {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.menu_open ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu_open ul li a span {
+  margin-right: .5rem;
+}
+
+@supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {
+  .menu_open {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(2rem);
+            backdrop-filter: blur(2rem);
+  }
 }
 
 .home_container {

@@ -15,14 +15,47 @@
     }
 }
 
-.menu {
+.menu_close {
+    cursor: pointer;
+}
 
-    .menu_close {
+.menu_open {
+    position: fixed;
+    inset: 0 0 0 35%;
+    background: $hamburger-menu-bg-noblur;
+    padding: 1rem;
+  
+    img {
+        justify-content: end;
         cursor: pointer;
     }
 
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin-top: 6rem;
+        
+        li {
+            margin: 1rem;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $nav-link;
+
+                span {
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+@supports (backdrop-filter: blur(2rem)) {
     .menu_open {
-        cursor: pointer;
+        background: $hamburger-menu-bg-blur;
+        backdrop-filter: blur(2rem);
     }
 }
 

@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
 
     return (
         <div className='menu'>
-            <div className='menu_close' style={{display: showMenu ? "block" : "none"}} >
+            <div className='menu_close' style={{display: showMenu ? "block" : "none"}}>
                 <img src={ HamburgerMenuIcon } alt='hamburger menu icon' onClick={ handleClick } />
             </div>
 
