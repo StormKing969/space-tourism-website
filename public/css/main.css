@@ -7,6 +7,7 @@
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -39,14 +40,19 @@ body {
 .menu_open {
   position: fixed;
   inset: 0 0 0 35%;
-  background: rgba(0, 0, 0, 0.333);
-  padding: 1rem;
+  background: rgba(56, 54, 54, 0.333);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .menu_open img {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  float: right;
+  margin: 1.5rem 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   cursor: pointer;
 }
 
@@ -59,12 +65,13 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style: none;
-  margin-top: 6rem;
+  margin: 8rem 0 0 1rem;
 }
 
 .menu_open ul li {
   margin: 1rem;
   cursor: pointer;
+  color: white;
 }
 
 .menu_open ul li a {
@@ -76,11 +83,55 @@ body {
   margin-right: .5rem;
 }
 
+.menu_open ul li a:hover {
+  color: rgba(255, 250, 250, 0.633);
+}
+
 @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {
   .menu_open {
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(2rem);
             backdrop-filter: blur(2rem);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .menu_close {
+    display: none !important;
+  }
+  .menu_open {
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: .5rem;
+    margin-right: 1rem;
+  }
+  .menu_open img {
+    display: none;
+  }
+  .menu_open ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  .menu_open ul li a:hover {
+    text-decoration: underline;
+  }
+  .menu_open ul li a span {
+    display: none;
   }
 }
 

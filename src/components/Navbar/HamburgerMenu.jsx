@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
                 <img src={ HamburgerMenuIcon } alt='hamburger menu icon' onClick={ handleClick } />
             </div>
 
-            <div className='menu_open' style={{display: showMenu ? "none" : "block"}} >
+            <div className='menu_open' style={{transform: showMenu ? "translateX(100%)" : "translateX(0)"}}>
                 <img src={ CloseIcon } alt='close icon' onClick={handleClick} />
 
                 <ul>
