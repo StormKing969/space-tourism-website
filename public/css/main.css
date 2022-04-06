@@ -155,17 +155,26 @@ body {
 .bg_img {
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
-}
-
-.bg_img img {
+  background: url("../assets/bg-img/background-home-mobile.jpg") no-repeat center center fixed;
+  background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  inset: 0 0 0 0;
   height: 100vh;
   width: 100%;
   z-index: -1;
+}
+
+@media screen and (min-width: 720px) {
+  .bg_img {
+    background: url("../assets/bg-img/background-home-tablet.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .bg_img {
+    background: url("../assets/bg-img/background-home-desktop.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=main.css.map */
