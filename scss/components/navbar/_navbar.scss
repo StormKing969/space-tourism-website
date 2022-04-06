@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .logo_icon {
@@ -21,7 +21,7 @@
 
 .menu_open {
     position: fixed;
-    inset: 0 0 0 35%;
+    inset: 0rem 0 0 35%;
     background: $hamburger-menu-bg-noblur;
     transform: translateX(100%);
     transition: $transition;
@@ -75,8 +75,7 @@
     .menu_open {
         transform: translateX(0) !important;
         height: fit-content;
-        margin-top: .5rem;
-        margin-right: 1rem;
+        margin-top: 1.5rem;
 
         img {
             display: none;
@@ -107,7 +106,20 @@
     }
 }
 
-@media screen and (min-width: 1020) {
+@media screen and (min-width: 1020px) {
+    .menu_open {
+    
+        ul {
 
-   
+            li {
+
+                a {
+
+                    span {
+                        display: inherit;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -25,7 +25,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .logo_icon img {
@@ -39,7 +39,7 @@ body {
 
 .menu_open {
   position: fixed;
-  inset: 0 0 0 35%;
+  inset: 0rem 0 0 35%;
   background: rgba(56, 54, 54, 0.333);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -105,8 +105,7 @@ body {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: .5rem;
-    margin-right: 1rem;
+    margin-top: 1.5rem;
   }
   .menu_open img {
     display: none;
@@ -132,6 +131,12 @@ body {
   }
   .menu_open ul li a span {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .menu_open ul li a span {
+    display: inherit;
   }
 }
 
