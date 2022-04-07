@@ -4,7 +4,6 @@ import HamburgerMenu from './HamburgerMenu'
 
 const Navbar = () => {
 
-
   return (
     <nav className='navbar'>
       <div className='logo_icon'>

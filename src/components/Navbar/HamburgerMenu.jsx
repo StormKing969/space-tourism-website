@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import HamburgerMenuIcon from '../../assets/shared/icon-hamburger.svg'
 import CloseIcon from '../../assets/shared/icon-close.svg'
+import { NavLink } from 'react-router-dom'
 
 const HamburgerMenu = () => {
     const [showMenu, setMenuState] = useState(true)
@@ -19,10 +20,30 @@ const HamburgerMenu = () => {
                 <img src={ CloseIcon } alt='close icon' onClick={handleClick} />
 
                 <ul>
-                    <li><a href='/'><span aria-hidden>00</span>HOME</a></li>
-                    <li><a href='/destination'><span aria-hidden>01</span>DESTINATION</a></li>
-                    <li><a href='/crew'><span aria-hidden>02</span>CREW</a></li>
-                    <li><a href='/technology'><span aria-hidden>03</span>TECHNOLOGY</a></li>
+                    <li>
+                        <NavLink end to='/' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <span aria-hidden>00</span>
+                        HOME
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink end to='/destination' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <span aria-hidden>01</span>
+                        DESTINATION
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink end to='/crew' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <span aria-hidden>02</span>
+                        CREW
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink end to='/technology' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <span aria-hidden>03</span>
+                        TECHNOLOGY
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         </div>

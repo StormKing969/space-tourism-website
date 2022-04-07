@@ -1,13 +1,14 @@
-.home_container {
+.home {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    color: $text-color;
 }
 
 .bg_img {
     transition: $transition;
-    background: url("../assets/bg-img/background-home-mobile.jpg") no-repeat center center fixed;
+    background: url("../assets/home-bg-img/background-home-mobile.jpg") no-repeat center center fixed;
     background-size: cover;
     position: absolute;
     inset: 0 0 0 0;
@@ -16,16 +17,96 @@
     z-index: -1;
 }
 
+.home_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+
+    h5 {
+        margin-bottom: 2rem;
+        text-transform: capitalize;
+    }
+}
+
+.home_title {
+    font-size: 5rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: $title-color;
+}
+
+.home_content {
+    margin-bottom: 3rem;
+
+    p {
+        line-height: 2rem;
+    }
+}
+
+.home_button {
+    border: 1px solid $home-btn-border;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $home-btn-border;
+    margin: 0 auto;
+    box-shadow: 0 0 25px 10px $home-btn-border-shadow;
+
+    a {
+        color: $home-btn-link;
+        text-decoration: none;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+    }
+}
+
 @media screen and (min-width: 720px) {
     .bg_img {
-        background: url("../assets/bg-img/background-home-tablet.jpg") no-repeat center center fixed;
+        background: url("../assets/home-bg-img/background-home-tablet.jpg") no-repeat center center fixed;
         background-size: cover;
+    }
+
+    .home_container {
+        
+        padding: 6rem;
+
+        h5 {
+            margin-top: 5rem;
+        }
     }
 }
 
 @media screen and (min-width: 1020px) {
+    .home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    .home_container {
+        width: 50%;
+        text-align: left;
+        align-items: flex-start;
+
+        h5 {
+            font-size: 2rem;
+        }
+    }
+
+    .home_title {
+        font-size: 8rem;
+    }
+
     .bg_img {
-        background: url("../assets/bg-img/background-home-desktop.jpg") no-repeat center center fixed;
+        background: url("../assets/home-bg-img/background-home-desktop.jpg") no-repeat center center fixed;
         background-size: cover;;
     }
 }
