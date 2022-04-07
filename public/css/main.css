@@ -164,7 +164,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #d2d8f9;
+  color: #b1b7e2;
 }
 
 .bg_img {
@@ -307,7 +307,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #d2d8f9;
+  color: #b1b7e2;
+  padding: 1rem;
 }
 
 .destination_container h5 span {
@@ -325,5 +326,117 @@ body {
   height: 100vh;
   width: 100%;
   z-index: -1;
+}
+
+.destination_img {
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.destination_img img {
+  width: 40%;
+  height: auto;
+}
+
+.destination_location {
+  margin: 0 0 1rem;
+}
+
+.destination_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+  font-size: .8rem;
+}
+
+.destination_name li {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.destination_name .destination_unselected {
+  text-decoration: none;
+  color: #d2d8f9;
+}
+
+.destination_name .destination_unselected:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  font-weight: 700;
+}
+
+.destination_name .destination_selected {
+  color: white;
+  border-bottom: 2px solid white;
+  font-weight: 700;
+}
+
+.destinationCard_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.destinationCard_content h1 {
+  margin-bottom: .5rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: white;
+}
+
+.destinationCard_description {
+  text-align: center;
+}
+
+.destinationCard_description p {
+  line-height: 1.8rem;
+  color: #b1b7e2;
+}
+
+.destinationCard_horizontal_line {
+  border: 1px solid rgba(33, 36, 49, 0.66);
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.destinationCard_facts {
+  text-align: center;
+}
+
+.destinationCard_facts span {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.destinationCard_facts p {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .1rem;
 }
 /*# sourceMappingURL=main.css.map */

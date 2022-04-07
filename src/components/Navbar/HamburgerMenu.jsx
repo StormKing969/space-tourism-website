@@ -21,25 +21,25 @@ const HamburgerMenu = () => {
 
                 <ul>
                     <li>
-                        <NavLink end to='/' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to='/' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>00</span>
                         HOME
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink end to='/destination' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to='/destination' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>01</span>
                         DESTINATION
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink end to='/crew' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to='/crew' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>02</span>
                         CREW
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink end to='/technology' className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to='/technology' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>03</span>
                         TECHNOLOGY
                         </NavLink>
