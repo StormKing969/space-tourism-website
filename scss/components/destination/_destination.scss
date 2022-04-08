@@ -80,7 +80,7 @@
     align-items: center;
 
     h1 {
-        margin-bottom: .5rem;
+        margin: 1rem 0 .5rem;
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 400;
@@ -89,6 +89,7 @@
 }
 
 .destinationCard_description {
+    margin-top: 1rem;
     text-align: center;
 
     p {
@@ -100,7 +101,7 @@
 .destinationCard_horizontal_line {
     border: 1px solid $destination-horizontal-line;
     width: 100%;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .destinationCard_facts {

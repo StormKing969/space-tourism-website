@@ -5,7 +5,8 @@ import Crew from './components/Crew/Crew'
 import Destination from './components/Destination/Destination'
 import Technology from './components/Technology/Technology'
 import ErrorPage from './components/ErrorPage/Error'
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/technology' element={<Technology />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

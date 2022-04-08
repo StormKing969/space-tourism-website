@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DestinationCard from './DestinationCard'
 import DestinationData from '../../assets/destination/DestinationData'
+import { NavLink } from 'react-router-dom'
 
 const Destination = () => {
   const moon = DestinationData[0]
@@ -9,12 +10,16 @@ const Destination = () => {
   const titan = DestinationData[3]
 
   const [destinationName, setDestinationName] = useState(moon)
+  const locationImg = destinationName.images.png
+  const locationName = destinationName.name
 
-  const [isActive, setActive] = useState(false);
-
-  const UserSelection = (e) => {
-    setActive(isActive ? false : true);
-
+  const UserSelection = (e) => {  
+    if(e.target.className === "destination_selected") {
+      e.target.className = "destination_unselected"
+    } else {
+      e.target.className = "destination_selected";
+    }
+   
     if(e.target.innerHTML === "MOON") {
       setDestinationName(moon);
     } else if(e.target.innerHTML === "MARS") {
@@ -25,9 +30,6 @@ const Destination = () => {
       setDestinationName(titan);
     }
   }
-
-  const locationImg = destinationName.images.png
-  const locationName = destinationName.name
 
   return (
     <div className='destination'>
@@ -43,10 +45,10 @@ const Destination = () => {
 
         <div className='destination_location'>
           <ul className='destination_name'>
-            <li><span className={ isActive ? 'destination_selected': 'destination_unselected' } onClick={ UserSelection }>MOON</span></li>
-            <li><span className={ isActive ? 'destination_selected': 'destination_unselected' } onClick={ UserSelection }>MARS</span></li>
-            <li><span className={ isActive ? 'destination_selected': 'destination_unselected' } onClick={ UserSelection }>EUROPA</span></li>
-            <li><span className={ isActive ? 'destination_selected': 'destination_unselected' } onClick={ UserSelection }>TITAN</span></li>
+            <li><NavLink end to={'/destination/' + (2)} className='destination_unselected' onClick={ UserSelection }>MOON</NavLink></li>
+            <li><NavLink end to='/destination/mars' className='destination_unselected' onClick={ UserSelection }>MARS</NavLink></li>
+            <li><NavLink end to='/destination/europa' className='destination_unselected' onClick={ UserSelection }>EUROPA</NavLink></li>
+            <li><NavLink end to='/destination/titan' className='destination_unselected' onClick={ UserSelection }>TITAN</NavLink></li>
           </ul>
         </div>
 
