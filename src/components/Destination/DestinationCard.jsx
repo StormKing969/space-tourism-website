@@ -10,11 +10,15 @@ function DestinationCard(props) {
         <span className="destinationCard_horizontal_line"></span>
 
         <div className="destinationCard_facts">
+          <div className="destination_fact_container">
             <span className="fact_title">AVG. DISTANCE</span>
             <p>{ props.distance }</p>
-            <br />
+          </div>
+          <br />
+          <div className="destination_fact_container">
             <span className="fact_title">EST. TRAVEL TIME</span>
             <p>{ props.travel }</p>
+          </div>
         </div>
     </div>
   )

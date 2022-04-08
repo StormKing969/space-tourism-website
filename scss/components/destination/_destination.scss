@@ -7,6 +7,8 @@
     padding: 1rem;
 
     h5 {
+        letter-spacing: .1rem;
+        color: $title-color;
 
         span {
             color: $destination-span;
@@ -51,6 +53,7 @@
     justify-content: space-around;
     list-style-type: none;
     font-size: .8rem;
+    letter-spacing: .2rem;
     
     li {
         margin: 0 1rem;
@@ -64,7 +67,7 @@
         &:hover {
             color: $title-color;
             // padding-bottom: 1rem;
-            border-bottom: 2px solid $title-color;
+            border-bottom: 1px solid $title-color;
             font-weight: 700;
         }
     }
@@ -72,7 +75,8 @@
     .destination_selected {
         color: $title-color;
         // padding-bottom: 1rem;
-        border-bottom: 2px solid $title-color;
+        text-decoration: none;
+        border-bottom: 1px solid $title-color;
         font-weight: 700;
     }
 }
@@ -110,17 +114,149 @@
 .destinationCard_facts {
     text-align: center;
 
-    span {
-        font-size: .8rem;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
+    .destination_fact_container {
+        margin-bottom: 1.5rem;
+
+        span {
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+        }
+    
+        p {
+            font-size: 2rem;
+            color: $title-color;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: .1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .destination_bg_img {
+        transition: $transition;
+        background: url("../assets/destination-bg-img/background-destination-tablet.jpg") no-repeat center center fixed;
+        background-size: cover;
     }
 
-    p {
-        font-size: 2rem;
-        color: $title-color;
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: .1rem;
+    .destination_container {
+        margin-top: 5rem;
+        display: inline-block;
+
+        h5 {
+            margin-left: 2rem;
+        }
+    }
+
+    .destination_location {
+        padding: 0 25%;
+    }
+
+    .destination_name {
+        margin-top: 3rem;
+
+        .destination_selected {
+            padding-bottom: .5rem;
+        }
+
+        .destination_unselected {
+    
+            &:hover {
+                padding-bottom: .5rem;
+            }
+        }
+    }
+
+    .destination_description {
+        margin: 0 10%;
+    }
+
+    .destinationCard_content {
+
+        h1 {
+            font-size: 5rem;
+        }
+    }
+
+    .destinationCard_facts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .destination_fact_container {
+        
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .destination_container {
+        padding: 0 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "page_title page_title"
+            "selected_planet_img planet_selection"
+            "selected_planet_img selected_planet_info";
+
+        h5 {
+            grid-area: page_title;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    }
+
+    .destination_img {
+        grid-area: selected_planet_img;
+        margin-top: 2rem;
+
+        img {
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+    }
+
+    .destination_location {
+        grid-area: planet_selection;
+        text-align: left;
+        padding: 0;
+        margin: 0 8%;
+    }
+
+    .destination_name {
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .destination_description {
+        grid-area: selected_planet_info;
+    }
+
+    .destinationCard_content {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .destinationCard_description {
+        text-align: left;
+    } 
+
+    .destinationCard_facts {
+        display: flex;
+        // align-items: flex-start;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .destination_fact_container {
+        margin-right: 5rem;
     }
 }

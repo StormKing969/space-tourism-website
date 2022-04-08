@@ -16,11 +16,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='home_button'>
-        <NavLink end to='/destination/moon' className='explore_btn'>
-          EXPLORE
-        </NavLink>
-      </div>
+      
+      <NavLink end to='/destination/moon'>
+        <div className='home_button'>
+        <span className='explore_btn'>EXPLORE</span>
+        </div>
+      </NavLink>
     </main>
   )
 }

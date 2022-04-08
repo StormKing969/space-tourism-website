@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DestinationCard from './DestinationCard'
 import DestinationData from '../../assets/destination/DestinationData'
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Destination = () => {
   const moon = DestinationData[0]

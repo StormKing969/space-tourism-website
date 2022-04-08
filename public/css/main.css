@@ -321,6 +321,11 @@ body {
   padding: 1rem;
 }
 
+.destination_container h5 {
+  letter-spacing: .1rem;
+  color: white;
+}
+
 .destination_container h5 span {
   color: #8d92b0;
   margin-right: .5rem;
@@ -375,6 +380,7 @@ body {
       justify-content: space-around;
   list-style-type: none;
   font-size: .8rem;
+  letter-spacing: .2rem;
 }
 
 .destination_name li {
@@ -389,13 +395,14 @@ body {
 
 .destination_name .destination_unselected:hover {
   color: white;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   font-weight: 700;
 }
 
 .destination_name .destination_selected {
   color: white;
-  border-bottom: 2px solid white;
+  text-decoration: none;
+  border-bottom: 1px solid white;
   font-weight: 700;
 }
 
@@ -440,18 +447,151 @@ body {
   text-align: center;
 }
 
-.destinationCard_facts span {
+.destinationCard_facts .destination_fact_container {
+  margin-bottom: 1.5rem;
+}
+
+.destinationCard_facts .destination_fact_container span {
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
 }
 
-.destinationCard_facts p {
+.destinationCard_facts .destination_fact_container p {
   font-size: 2rem;
   color: white;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: .1rem;
+}
+
+@media screen and (min-width: 720px) {
+  .destination_bg_img {
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background: url("../assets/destination-bg-img/background-destination-tablet.jpg") no-repeat center center fixed;
+    background-size: cover;
+  }
+  .destination_container {
+    margin-top: 5rem;
+    display: inline-block;
+  }
+  .destination_container h5 {
+    margin-left: 2rem;
+  }
+  .destination_location {
+    padding: 0 25%;
+  }
+  .destination_name {
+    margin-top: 3rem;
+  }
+  .destination_name .destination_selected {
+    padding-bottom: .5rem;
+  }
+  .destination_name .destination_unselected:hover {
+    padding-bottom: .5rem;
+  }
+  .destination_description {
+    margin: 0 10%;
+  }
+  .destinationCard_content h1 {
+    font-size: 5rem;
+  }
+  .destinationCard_facts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  .destination_fact_container p {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .destination_container {
+    padding: 0 3rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "page_title page_title" "selected_planet_img planet_selection" "selected_planet_img selected_planet_info";
+  }
+  .destination_container h5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: page_title;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .destination_img {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: selected_planet_img;
+    margin-top: 2rem;
+  }
+  .destination_img img {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+  .destination_location {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: planet_selection;
+    text-align: left;
+    padding: 0;
+    margin: 0 8%;
+  }
+  .destination_name {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .destination_description {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: selected_planet_info;
+  }
+  .destinationCard_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  .destinationCard_description {
+    text-align: left;
+  }
+  .destinationCard_facts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .destination_fact_container {
+    margin-right: 5rem;
+  }
 }
 
 .footer {
@@ -492,7 +632,7 @@ body {
 
 @media screen and (min-width: 720px) {
   .footer {
-    margin-top: calc(100vh - 80vh);
+    margin-top: calc(100vh - 90vh);
   }
 }
 
