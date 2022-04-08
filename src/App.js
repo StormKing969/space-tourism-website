@@ -15,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/crew' element={<Crew />} />
+        {/* <Route path='/destination' element={<Destination />} /> */}
         <Route path='/destination/:planetName' element={<Destination />} />
         <Route path='/technology' element={<Technology />} />
         <Route path='*' element={<ErrorPage />} />

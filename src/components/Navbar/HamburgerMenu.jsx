@@ -27,7 +27,7 @@ const HamburgerMenu = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink end to='/destination' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to='/destination/moon' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>01</span>
                         DESTINATION
                         </NavLink>

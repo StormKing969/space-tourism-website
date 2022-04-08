@@ -4,8 +4,6 @@ import DestinationData from '../../assets/destination/DestinationData'
 import { NavLink, useParams } from 'react-router-dom'
 
 const Destination = () => {
-  // let { planetName } = useParams()
-
   const moon = DestinationData[0]
   const mars = DestinationData[1]
   const europa = DestinationData[2]
