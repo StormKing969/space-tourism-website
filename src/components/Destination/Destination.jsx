@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import DestinationCard from './DestinationCard'
 import DestinationData from '../../assets/destination/DestinationData'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 const Destination = () => {
+  // let { planetName } = useParams()
+
   const moon = DestinationData[0]
   const mars = DestinationData[1]
   const europa = DestinationData[2]
@@ -14,12 +16,6 @@ const Destination = () => {
   const locationName = destinationName.name
 
   const UserSelection = (e) => {  
-    if(e.target.className === "destination_selected") {
-      e.target.className = "destination_unselected"
-    } else {
-      e.target.className = "destination_selected";
-    }
-   
     if(e.target.innerHTML === "MOON") {
       setDestinationName(moon);
     } else if(e.target.innerHTML === "MARS") {
@@ -45,10 +41,10 @@ const Destination = () => {
 
         <div className='destination_location'>
           <ul className='destination_name'>
-            <li><NavLink end to={'/destination/' + (2)} className='destination_unselected' onClick={ UserSelection }>MOON</NavLink></li>
-            <li><NavLink end to='/destination/mars' className='destination_unselected' onClick={ UserSelection }>MARS</NavLink></li>
-            <li><NavLink end to='/destination/europa' className='destination_unselected' onClick={ UserSelection }>EUROPA</NavLink></li>
-            <li><NavLink end to='/destination/titan' className='destination_unselected' onClick={ UserSelection }>TITAN</NavLink></li>
+            <li><NavLink end to='/destination/moon' className={(navData) => navData.isActive ? "destination_selected" : "destination_unselected"} onClick={ UserSelection }>MOON</NavLink></li>
+            <li><NavLink end to='/destination/mars' className={(navData) => navData.isActive ? "destination_selected" : "destination_unselected"} onClick={ UserSelection }>MARS</NavLink></li>
+            <li><NavLink end to='/destination/europa' className={(navData) => navData.isActive ? "destination_selected" : "destination_unselected"} onClick={ UserSelection }>EUROPA</NavLink></li>
+            <li><NavLink end to='/destination/titan' className={(navData) => navData.isActive ? "destination_selected" : "destination_unselected"} onClick={ UserSelection }>TITAN</NavLink></li>
           </ul>
         </div>
 
