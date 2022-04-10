@@ -11,6 +11,11 @@ body {
     overflow-x: hidden;
 }
 
+.main_container {
+    max-width: 1440px;
+    margin: auto;
+}
+
 @import "./components/navbar/navbar";
 @import "./components/home/home";
 @import "./components/destination/destination";

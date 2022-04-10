@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import HamburgerMenuIcon from '../../assets/shared/icon-hamburger.svg'
 import CloseIcon from '../../assets/shared/icon-close.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 const HamburgerMenu = () => {
+    const { planetName } = useParams();
+
+    console.log(planetName);
+
     const [showMenu, setMenuState] = useState(true)
 
     function handleClick() {
@@ -27,7 +31,7 @@ const HamburgerMenu = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink end to='/destination/moon' onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
+                        <NavLink end to={'/destination/' + planetName} onClick={handleClick} className={(navData) => navData.isActive ? "main_link actived" : "main_link"}>
                         <span aria-hidden>01</span>
                         DESTINATION
                         </NavLink>
