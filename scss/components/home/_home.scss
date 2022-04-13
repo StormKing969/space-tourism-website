@@ -4,8 +4,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: auto 0;
     color: $text-color;
+    margin-top: 5vh;
 }
 
 .bg_img {
@@ -86,9 +86,13 @@
         background-size: cover;
     }
 
+    .home {
+        margin-top: 5vh;
+    }
+
     .home_container {
         
-        padding: 6rem;
+        padding: 8rem 5rem;
 
         h5 {
             margin-top: 5rem;
