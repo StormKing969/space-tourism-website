@@ -1,8 +1,10 @@
 .home {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: auto 0;
     color: $text-color;
 }
 
@@ -10,10 +12,13 @@
     transition: $transition;
     background: url("../assets/home-bg-img/background-home-mobile.jpg") no-repeat center center fixed;
     background-size: cover;
-    position: absolute;
-    inset: 0 0 0 0;
-    height: 100vh;
+    min-height: 100%;
+    min-width: 100%;
     width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -97,17 +102,20 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 5rem;
     }
 
     .home_container {
-        width: 50%;
+        width: fit-content;
         text-align: left;
         align-items: flex-start;
 
         h5 {
             font-size: 2rem;
         }
+    }
+
+    .home_button {
+        margin-right: 6rem;
     }
 
     .home_title {
